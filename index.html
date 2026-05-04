@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ru"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Grammar Drive Pro — 7 тем × 20 уникальных вопросов&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: system-ui, 'Inter', sans-serif; background: #0a0c12; color: #edf2ff; padding-bottom: 90px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.app { max-width: 900px; margin: 0 auto; padding: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo h1 { font-size: 1.5rem; background: linear-gradient(135deg, #c084fc, #60a5fa); -webkit-background-clip: text; background-clip: text; color: transparent; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo p { font-size: 0.7rem; color: #6b7280; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-badge { background: #1e293b; padding: 8px 16px; border-radius: 40px; font-size: 0.85rem; border: 1px solid #334155; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-badge span { color: #facc15; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tabs { display: flex; gap: 4px; margin-bottom: 28px; flex-wrap: wrap; border-bottom: 1px solid #1e293b; padding-bottom: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn { background: transparent; border: none; padding: 5px 10px; border-radius: 40px; font-weight: 600; font-size: 0.7rem; color: #94a3b8; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn.active { background: #3b82f6; color: white; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-pane { display: none; animation: fade 0.2s ease; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-pane.active-pane { display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fade { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card { background: #111827; border-radius: 24px; padding: 18px; margin-bottom: 20px; border: 1px solid #1f2a3e; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.grammar-tip { background: #172032; border-left: 4px solid #3b82f6; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h2 { font-size: 1.2rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h3 { font-size: 0.95rem; margin: 12px 0 6px 0; color: #a5b4fc; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.test-question { background: #0f172a; border-radius: 16px; padding: 14px; margin-bottom: 12px; border: 1px solid #2d3a5e; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.options { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; align-items: flex-start; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option { display: flex; align-items: center; gap: 10px; background: #1e293b; padding: 8px 14px; border-radius: 40px; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option input { accent-color: #3b82f6; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button { background: #3b82f6; color: white; border: none; padding: 10px 18px; border-radius: 40px; font-weight: 600; font-size: 0.85rem; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.secondary { background: #334155; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.small { padding: 5px 10px; font-size: 0.7rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result { margin-top: 14px; padding: 10px; border-radius: 16px; background: #1f2a3e; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.preposition-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; margin-top: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prep-item { background: #0f172a; padding: 6px 10px; border-radius: 12px; font-size: 0.8rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prep-item strong { color: #facc15; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.note-item, .discussion-item, .error-item, .word-item { background: #0f172a; border-radius: 16px; padding: 10px; margin-bottom: 10px; border-left: 3px solid #3b82f6; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.error-item { border-left-color: #ef4444; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.word-item { border-left-color: #10b981; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.discussion-item { border-left-color: #f97316; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>textarea, input { width: 100%; background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 10px; color: white; font-family: inherit; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.badge { background: #facc1510; color: #facc15; font-size: 0.65rem; padding: 3px 8px; border-radius: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.topic-selector { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.topic-btn { background: #1e293b; padding: 6px 12px; border-radius: 40px; font-size: 0.75rem; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.topic-btn.active-topic { background: #3b82f6; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.example { background: #0f172a; padding: 6px 10px; border-radius: 12px; margin: 8px 0; font-size: 0.85rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="app"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;&lt;h1&gt;🎓 Grammar Drive Pro&lt;/h1&gt;&lt;p&gt;7 тем × 20 уникальных вопросов | Passive | Reported Speech | 50+ предлогов&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="level-badge"&gt;🧠 XP · Уровень &lt;span id="xpLevel"&gt;1&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn active" data-tab="topics"&gt;📘 Разбор тем&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" data-tab="train"&gt;⚡ Тренажёр (7 тем)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" data-tab="exam"&gt;🎯 Тест (50 заданий)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" data-tab="errors"&gt;📊 Мои ошибки&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" data-tab="vocab"&gt;📖 Мой словарь&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" data-tab="discuss"&gt;💬 Обсуждения&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" data-tab="notes"&gt;📝 Заметки&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- РАЗДЕЛ 1: РАЗБОР ТЕМ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="topics" class="tab-pane active-pane"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card grammar-tip"&gt;&lt;h2&gt;📖 Все времена (Active Voice)&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Present Simple: I work / The sun rises in the east.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Present Continuous: I am reading a great book.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Present Perfect: I have lost my keys. / She has never been to Japan.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Present Perfect Continuous: I have been waiting for an hour.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Past Simple: I saw him yesterday.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Past Continuous: At 8pm, I was watching TV.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Past Perfect: When we arrived, the movie had already started.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Past Perfect Continuous: She had been studying for hours before the exam.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Future Simple: I will call you tomorrow.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Future Continuous: This time tomorrow, I will be flying to Paris.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Future Perfect: By 2025, I will have graduated.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="secondary small" data-save="tenses"&gt;📌 Сохранить&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card grammar-tip"&gt;&lt;h2&gt;🔇 Passive Voice&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Present Simple: The letter is sent every day.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Past Simple: The letter was sent yesterday.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Future Simple: The letter will be sent tomorrow.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Present Perfect: The letter has been sent already.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Present Continuous: The letter is being sent now.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Past Continuous: The letter was being sent when I called.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;Modal verbs: The letter must be sent today.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="secondary small" data-save="passive"&gt;📌 Сохранить&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card grammar-tip"&gt;&lt;h2&gt;💬 Reported Speech&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;"I work" → He said he worked.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;"I am working" → He said he was working.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;"I have worked" → He said he had worked.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;"I worked" → He said he had worked.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;"I will work" → He said he would work.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;"I can swim" → He said he could swim.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="example"&gt;"I must go" → He said he had to go.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="secondary small" data-save="reported"&gt;📌 Сохранить&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card grammar-tip"&gt;&lt;h2&gt;📌 Предлоги (50+ примеров)&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preposition-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;at 5 o'clock&lt;/strong&gt; — в 5 часов&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;at night&lt;/strong&gt; — ночью&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;at the weekend&lt;/strong&gt; — на выходных&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;in the morning&lt;/strong&gt; — утром&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;in July&lt;/strong&gt; — в июле&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;in 2024&lt;/strong&gt; — в 2024&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;on Monday&lt;/strong&gt; — в понедельник&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;on time&lt;/strong&gt; — вовремя&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;since 2010&lt;/strong&gt; — с 2010&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;for three days&lt;/strong&gt; — три дня&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;by tomorrow&lt;/strong&gt; — к завтра&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;during the lesson&lt;/strong&gt; — во время урока&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;at school&lt;/strong&gt; — в школе&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;in the room&lt;/strong&gt; — в комнате&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;on the table&lt;/strong&gt; — на столе&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;under the bed&lt;/strong&gt; — под кроватью&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;between the chairs&lt;/strong&gt; — между стульями&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;next to the window&lt;/strong&gt; — рядом с окном&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;interested in&lt;/strong&gt; — заинтересован в&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;responsible for&lt;/strong&gt; — ответственный за&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;good at&lt;/strong&gt; — хорош в&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;apologise for&lt;/strong&gt; — извиняться за&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;succeed in&lt;/strong&gt; — преуспеть в&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;look forward to&lt;/strong&gt; — с нетерпением ждать&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;afraid of&lt;/strong&gt; — бояться&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;keen on&lt;/strong&gt; — увлекаться&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;tired of&lt;/strong&gt; — устал от&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;famous for&lt;/strong&gt; — известен за&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;worried about&lt;/strong&gt; — беспокоиться о&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;insist on&lt;/strong&gt; — настаивать на&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;complain about&lt;/strong&gt; — жаловаться на&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;familiar with&lt;/strong&gt; — знаком с&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;married to&lt;/strong&gt; — женат/замужем за&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;capable of&lt;/strong&gt; — способен на&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;different from&lt;/strong&gt; — отличаться от&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;rely on&lt;/strong&gt; — полагаться на&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prep-item"&gt;&lt;strong&gt;wait for&lt;/strong&gt; — ждать&lt;/div&gt;&lt;div class="prep-item"&gt;&lt;strong&gt;pay for&lt;/strong&gt; — платить за&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="secondary small" data-save="prepositions" style="margin-top:12px;"&gt;📌 Сохранить&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- РАЗДЕЛ 2: ТРЕНАЖЁР (7 тем × 20 уникальных вопросов) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="train" class="tab-pane"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;🎮 Тренажёр — выбери тему&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="topic-selector" id="topicSelector"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="topic-btn" data-train-topic="tenses"&gt;Все времена&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="topic-btn" data-train-topic="passive"&gt;Passive Voice&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="topic-btn" data-train-topic="reported"&gt;Reported Speech&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="topic-btn" data-train-topic="conditionals"&gt;Conditionals&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="topic-btn" data-train-topic="prepositions"&gt;Предлоги&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="topic-btn" data-train-topic="wordformation"&gt;Word Formation&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="topic-btn" data-train-topic="mixed"&gt;Mixed Tenses&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="trainQuizContainer"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="checkTrainTopicBtn"&gt;Проверить ответы&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="trainTopicResult" class="result"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- РАЗДЕЛ 3: ТЕСТ (50 ВОПРОСОВ) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="exam" class="tab-pane"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;&lt;h2&gt;📝 Полный тест — 50 заданий&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="fullTestContainer"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="submitTestBtn"&gt;Завершить тест&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="exportResultsBtn" class="secondary"&gt;📎 Экспорт результатов&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="testResult" class="result"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="errors" class="tab-pane"&gt;&lt;div class="card"&gt;&lt;h2&gt;📊 Мои ошибки&lt;/h2&gt;&lt;button id="clearErrorsBtn" class="secondary small"&gt;🗑️ Очистить&lt;/button&gt;&lt;div id="errorsList" style="margin-top:16px;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="vocab" class="tab-pane"&gt;&lt;div class="card"&gt;&lt;h2&gt;📖 Мой словарь&lt;/h2&gt;&lt;div class="flex-between"&gt;&lt;input type="text" id="newWord" placeholder="Слово" style="flex:2;"&gt;&lt;input type="text" id="newWordTrans" placeholder="Перевод" style="flex:2;"&gt;&lt;button id="addWordBtn"&gt;➕&lt;/button&gt;&lt;/div&gt;&lt;input type="text" id="wordExample" placeholder="Пример"&gt;&lt;div id="vocabList" style="margin-top:16px;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="discuss" class="tab-pane"&gt;&lt;div class="card"&gt;&lt;h2&gt;💬 Grammar Lounge&lt;/h2&gt;&lt;textarea id="newComment" rows="2" placeholder="Вопрос по грамматике..."&gt;&lt;/textarea&gt;&lt;button id="postCommentBtn"&gt;Опубликовать&lt;/button&gt;&lt;div id="discussionList" style="margin-top:16px;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="notes" class="tab-pane"&gt;&lt;div class="card"&gt;&lt;h2&gt;📓 Заметки&lt;/h2&gt;&lt;div class="flex-between"&gt;&lt;input type="text" id="newNoteTitle" placeholder="Название"&gt;&lt;button id="addNoteBtn"&gt;➕&lt;/button&gt;&lt;/div&gt;&lt;textarea id="newNoteContent" rows="2" placeholder="Содержание"&gt;&lt;/textarea&gt;&lt;div id="notesList" style="margin-top:16px;"&gt;&lt;/div&gt;&lt;button id="exportNotesBtn" class="secondary"&gt;📇 Карточки&lt;/button&gt;&lt;div id="flashcardMode" style="display:none; margin-top:16px;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Хранилища</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let userNotes = JSON.parse(localStorage.getItem('grammar_notes_pro2')) || [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let discussions = JSON.parse(localStorage.getItem('grammar_discussions_pro2')) || [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let userVocabulary = JSON.parse(localStorage.getItem('grammar_vocab_pro2')) || [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let userErrors = JSON.parse(localStorage.getItem('grammar_errors_pro2')) || [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(discussions.length===0){discussions.push({text:"💡 Как отличить Present Perfect от Past Simple?",date:new Date().toLocaleString()});localStorage.setItem('grammar_discussions_pro2',JSON.stringify(discussions));}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ========== 7 ТЕМ × 20 УНИКАЛЬНЫХ ВОПРОСОВ ==========</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Тема 1: Все времена (20 уникальных)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const tensesQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (work) here since 2018.", correct:"has worked", opts:["worked","has worked","have worked"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"At 8pm yesterday, I ________ (watch) TV.", correct:"was watching", opts:["watched","was watching","had watched"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"By 2025, they ________ (finish) the project.", correct:"will have finished", opts:["will finish","will have finished","finish"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I ________ (never/see) such a beautiful sunset.", correct:"have never seen", opts:["never saw","have never seen","never have seen"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"When we arrived, the film ________ (already/start).", correct:"had already started", opts:["has started","had already started","already started"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"This time next week, we ________ (fly) to Paris.", correct:"will be flying", opts:["will fly","will be flying","are flying"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (read) a book right now.", correct:"is reading", opts:["reads","is reading","has read"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I ________ (live) in New York for ten years before moving.", correct:"had lived", opts:["lived","have lived","had lived"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He ________ (not/see) her since they graduated.", correct:"hasn't seen", opts:["didn't see","hasn't seen","hadn't seen"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The train ________ (leave) at 7pm every day.", correct:"leaves", opts:["is leaving","leaves","will leave"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"What ________ you ________ (do) at 8pm last night?", correct:"were doing", opts:["did do","were doing","had done"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (study) for hours before the exam.", correct:"had been studying", opts:["studied","had studied","had been studying"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I ________ (finish) this report by tomorrow morning.", correct:"will have finished", opts:["will finish","will have finished","am finishing"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"They ________ (build) a new school in our town currently.", correct:"are building", opts:["build","are building","have built"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He usually ________ (drink) coffee in the morning.", correct:"drinks", opts:["drink","drinks","is drinking"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"We ________ (wait) for the bus when it started to rain.", correct:"were waiting", opts:["waited","were waiting","had waited"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (already/eat) when I arrived.", correct:"had already eaten", opts:["has eaten","had eaten","had already eaten"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Next Friday at 6pm, I ________ (have) dinner with friends.", correct:"will be having", opts:["will have","will be having","am having"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He ________ (work) for this company since 2015.", correct:"has worked", opts:["worked","has worked","have worked"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I ________ (never/be) to Australia.", correct:"have never been", opts:["never went","have never been","never was"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Тема 2: Passive Voice (20 уникальных)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const passiveQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The letter ________ (send) every day.", correct:"is sent", opts:["is sent","was sent","has sent"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The house ________ (build) in 1980.", correct:"was built", opts:["is built","was built","has built"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The project ________ (finish) by next week.", correct:"will be finished", opts:["will finish","will be finished","is finished"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The cake ________ (eat) already.", correct:"has been eaten", opts:["has eaten","has been eaten","was eaten"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The room ________ (clean) when I arrived.", correct:"was being cleaned", opts:["was cleaning","was being cleaned","cleaned"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The documents ________ (must/sign) today.", correct:"must be signed", opts:["must sign","must be signed","must have signed"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"This book ________ (can/find) in any library.", correct:"can be found", opts:["can find","can be found","is found"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The concert ________ (cancel) due to rain.", correct:"was cancelled", opts:["cancelled","was cancelled","has cancelled"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The report ________ (write) at the moment.", correct:"is being written", opts:["writes","is writing","is being written"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The flowers ________ (water) every morning.", correct:"are watered", opts:["water","are watered","have watered"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"A new hospital ________ (build) in our city now.", correct:"is being built", opts:["builds","is built","is being built"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The thief ________ (catch) by the police yesterday.", correct:"was caught", opts:["caught","was caught","has been caught"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Dinner ________ (serve) at 7pm tomorrow.", correct:"will be served", opts:["will serve","will be served","is served"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"This problem ________ (can/solve) easily.", correct:"can be solved", opts:["can solve","can be solved","solves"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The windows ________ (clean) when I came home.", correct:"were being cleaned", opts:["cleaned","were cleaning","were being cleaned"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The bridge ________ (repair) since last month.", correct:"has been repaired", opts:["repaired","has been repaired","was repaired"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The invitations ________ (send) to all guests already.", correct:"have been sent", opts:["sent","have sent","have been sent"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The competition ________ (hold) in our school every year.", correct:"is held", opts:["holds","is held","has held"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The package ________ (deliver) by 10am tomorrow.", correct:"will have been delivered", opts:["will deliver","will be delivered","will have been delivered"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The old building ________ (demolish) next month.", correct:"will be demolished", opts:["demolishes","will demolish","will be demolished"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Тема 3: Reported Speech (20 уникальных)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const reportedQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I work hard.' → He said he ________ hard.", correct:"worked", opts:["works","worked","has worked"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I am reading.' → She said she ________ reading.", correct:"was", opts:["is","was","were"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I have finished.' → He said he ________ finished.", correct:"had", opts:["has","had","have"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I will call you.' → She said she ________ call me.", correct:"would", opts:["will","would","shall"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I can swim.' → He said he ________ swim.", correct:"could", opts:["can","could","might"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I must go.' → She said she ________ to go.", correct:"had", opts:["must","had","has"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I saw her yesterday.' → He said he ________ her the day before.", correct:"had seen", opts:["saw","had seen","has seen"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'We are leaving now.' → They said they ________ leaving then.", correct:"were", opts:["are","were","was"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I don't like coffee.' → She said she ________ like coffee.", correct:"didn't", opts:["doesn't","didn't","hadn't"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I'll help you.' → He promised he ________ help me.", correct:"would", opts:["will","would","should"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I've never been to London.' → He said he ________ never been to London.", correct:"had", opts:["has","had","have"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I'm leaving tomorrow.' → She said she ________ leaving the next day.", correct:"was", opts:["is","was","were"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I can't drive.' → He admitted he ________ drive.", correct:"couldn't", opts:["can't","couldn't","hadn't"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'We've finished our homework.' → They said they ________ their homework.", correct:"had finished", opts:["finished","have finished","had finished"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I may be late.' → She said she ________ be late.", correct:"might", opts:["may","might","would"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'You should see a doctor.' → He advised me that I ________ see a doctor.", correct:"should", opts:["should","would","could"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I was sleeping when you called.' → He said he ________ sleeping when I called.", correct:"was", opts:["is","was","had been"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'We are going to the cinema.' → They said they ________ to the cinema.", correct:"were going", opts:["are going","were going","go"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I love this song.' → She said she ________ that song.", correct:"loved", opts:["loves","loved","had loved"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I didn't break the vase.' → He denied that he ________ the vase.", correct:"had broken", opts:["broke","had broken","has broken"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Тема 4: Conditionals (20 уникальных)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const conditionalsQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If it rains tomorrow, we ________ (stay) at home.", correct:"will stay", opts:["stay","will stay","would stay"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If I ________ (be) you, I would apologise.", correct:"were", opts:["was","were","am"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If she had studied, she ________ (pass) the exam.", correct:"would have passed", opts:["would pass","would have passed","passed"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If you heat ice, it ________ (melt).", correct:"melts", opts:["melt","melts","will melt"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If I had known, I ________ (tell) you.", correct:"would have told", opts:["told","would tell","would have told"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Unless you study, you ________ (pass) the exam.", correct:"won't pass", opts:["don't pass","won't pass","wouldn't pass"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I wish I ________ (be) taller.", correct:"were", opts:["was","were","am"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'd rather you ________ (be) quiet.", correct:"were", opts:["are","were","was"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If she ________ (practice) more, she would be a great musician.", correct:"practiced", opts:["practices","practiced","had practiced"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If we leave now, we ________ (catch) the train.", correct:"will catch", opts:["catch","will catch","would catch"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If only she ________ (listen) to my advice yesterday.", correct:"had listened", opts:["listened","had listened","would listen"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Suppose you ________ (win) the lottery, what would you do?", correct:"won", opts:["win","won","had won"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"It's time you ________ (start) studying.", correct:"started", opts:["start","started","would start"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If he ________ (call), tell him I'm busy.", correct:"calls", opts:["call","calls","will call"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She would be happier if she ________ (have) more free time.", correct:"had", opts:["has","had","would have"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If they ________ (invite) me, I would have come.", correct:"had invited", opts:["invited","had invited","have invited"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He would have called if his phone ________ (not/die).", correct:"hadn't died", opts:["didn't die","hadn't died","wouldn't die"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If I ________ (see) him, I'll tell him.", correct:"see", opts:["see","saw","will see"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Unless it ________ (stop) raining, we won't go out.", correct:"stops", opts:["stop","stops","will stop"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If you had told me earlier, I ________ (help) you.", correct:"would have helped", opts:["helped","would help","would have helped"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Тема 5: Предлоги (20 уникальных)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const prepositionsQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is interested ________ learning Spanish.", correct:"in", opts:["in","at","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He is responsible ________ the project.", correct:"for", opts:["of","for","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'm not very good ________ math.", correct:"at", opts:["in","at","on"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"We arrived ________ the airport late.", correct:"at", opts:["to","at","in"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She apologised ________ being late.", correct:"for", opts:["about","for","of"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I look forward ________ hearing from you.", correct:"to", opts:["for","to","at"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He succeeded ________ passing the exam.", correct:"in", opts:["to","in","at"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is afraid ________ spiders.", correct:"of", opts:["from","of","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"They are keen ________ playing football.", correct:"on", opts:["in","on","at"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'm tired ________ waiting for you.", correct:"of", opts:["from","of","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is famous ________ her paintings.", correct:"for", opts:["of","for","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'm worried ________ the test results.", correct:"about", opts:["of","about","for"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She insisted ________ paying for dinner.", correct:"on", opts:["in","on","at"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"They complained ________ the noise.", correct:"about", opts:["for","about","of"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'm not familiar ________ this topic.", correct:"with", opts:["to","with","in"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is married ________ a doctor.", correct:"to", opts:["with","to","of"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He is capable ________ much more.", correct:"of", opts:["to","of","for"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is different ________ her sister.", correct:"from", opts:["than","from","to"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Don't rely ________ other people too much.", correct:"on", opts:["to","on","of"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"We are waiting ________ the bus.", correct:"for", opts:["to","for","on"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Тема 6: Word Formation (20 уникальных)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const wordformationQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The ________ (compete) was very exciting.", correct:"competition", opts:["compete","competition","competitor"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is very ________ (create) and artistic.", correct:"creative", opts:["creation","creative","creativity"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"His ________ (decide) surprised everyone.", correct:"decision", opts:["deciding","decision","decide"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The ________ (develop) of the app took months.", correct:"development", opts:["developing","development","developer"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Don't be so ________ (patient)! Just wait.", correct:"impatient", opts:["unpatient","impatient","inpatient"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is a very ________ (success) businesswoman.", correct:"successful", opts:["success","succeed","successful"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"His ________ (behave) was unacceptable.", correct:"behaviour", opts:["behaving","behaviour","behaved"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She felt a sense of ________ (achieve).", correct:"achievement", opts:["achieving","achievement","achiever"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"It's ________ (legal) to park here.", correct:"illegal", opts:["illegal","unlegal","inlegal"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (agree) with the proposal.", correct:"disagreed", opts:["unagreed","disagreed","misagreed"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"His ________ (suggest) was very helpful.", correct:"suggestion", opts:["suggest","suggestion","suggesting"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She needs to be more ________ (rely).", correct:"reliable", opts:["relying","reliable","reliant"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The ________ (perform) was outstanding.", correct:"performance", opts:["perform","performer","performance"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I want to ________ (apology) for my mistake.", correct:"apologise", opts:["apology","apologise","apologetic"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is ________ (able) to attend the meeting.", correct:"unable", opts:["disable","unable","inable"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The news was ________ (shock) unexpected.", correct:"shockingly", opts:["shock","shocked","shockingly"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"His ________ (honest) cost him his job.", correct:"dishonesty", opts:["unhonesty","dishonesty","inhonesty"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She showed great ________ (brave) during the crisis.", correct:"bravery", opts:["brave","bravery","braveness"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"What is the ________ (long) of the bridge?", correct:"length", opts:["long","length","longness"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Her ________ (kind) is known to everyone.", correct:"kindness", opts:["kind","kindness","kindly"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Тема 7: Mixed Tenses (20 уникальных)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const mixedQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (live) in Paris since 2019.", correct:"has lived", opts:["lived","has lived","have lived"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"While I ________ (walk) home, I saw an accident.", correct:"was walking", opts:["walked","was walking","had walked"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"They ________ (already/eat) when we arrived.", correct:"had already eaten", opts:["have eaten","had eaten","had already eaten"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"What ________ you ________ (do) at 8pm yesterday?", correct:"were doing", opts:["did do","were doing","had done"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"After she ________ (finish), she went out.", correct:"had finished", opts:["finished","had finished","has finished"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"This time next week, we ________ (fly) to Paris.", correct:"will be flying", opts:["will fly","will be flying","are flying"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (learn) English for five years now.", correct:"has been learning", opts:["has learned","has been learning","learns"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I ________ (finish) the report by tomorrow morning.", correct:"will have finished", opts:["will finish","will have finished","am finishing"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He usually ________ (drink) tea for breakfast.", correct:"drinks", opts:["drink","drinks","is drinking"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The phone ________ (ring) while I was taking a shower.", correct:"rang", opts:["rang","was ringing","had rung"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"By the time we get there, the movie ________ (start).", correct:"will have started", opts:["will start","will have started","starts"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (work) here for ten years before she retired.", correct:"had worked", opts:["worked","has worked","had worked"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'm sorry I'm late. ________ you ________ (wait) long?", correct:"Have been waiting", opts:["Did wait","Have been waiting","Had waited"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The children ________ (play) outside when it started to rain.", correct:"were playing", opts:["played","were playing","had played"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (never/meet) such a kind person before.", correct:"had never met", opts:["never met","has never met","had never met"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"This time tomorrow, I ________ (lie) on the beach.", correct:"will be lying", opts:["will lie","will be lying","am lying"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He ________ (already/leave) when she arrived at the station.", correct:"had already left", opts:["has left","had left","had already left"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I ________ (think) about changing my job recently.", correct:"have been thinking", opts:["think","am thinking","have been thinking"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (not/see) him since they had a fight.", correct:"hasn't seen", opts:["didn't see","hasn't seen","hadn't seen"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"They ________ (build) a new bridge over this river now.", correct:"are building", opts:["build","are building","have built"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const allTopics = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tenses: tensesQuestions,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>passive: passiveQuestions,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reported: reportedQuestions,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>conditionals: conditionalsQuestions,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>prepositions: prepositionsQuestions,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>wordformation: wordformationQuestions,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>mixed: mixedQuestions</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentTrainTopic = "tenses";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentTrainAnswers = {};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getTopicName(id){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const n={tenses:"Все времена",passive:"Passive Voice",reported:"Reported Speech",conditionals:"Conditionals",prepositions:"Предлоги",wordformation:"Word Formation",mixed:"Mixed Tenses"};</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return n[id]||id;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderTrainTopic(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const qs = allTopics[currentTrainTopic];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let html = `&lt;h3&gt;📚 ${getTopicName(currentTrainTopic)} — 20 уникальных вопросов&lt;/h3&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>qs.forEach((q,i)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>html+=`&lt;div class="test-question"&gt;&lt;p&gt;&lt;strong&gt;${i+1}. ${q.text}&lt;/strong&gt;&lt;/p&gt;&lt;div class="options"&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q.opts.forEach(opt=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const checked = currentTrainAnswers[i] === opt ? 'checked' : '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>html+=`&lt;label class="option"&gt;&lt;input type="radio" name="t${i}" value="${opt}" ${checked}&gt; ${opt}&lt;/label&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>html+=`&lt;/div&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('trainQuizContainer').innerHTML = html;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for(let i=0;i&lt;qs.length;i++){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(currentTrainAnswers[i]){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let radio = document.querySelector(`input[name="t${i}"][value="${currentTrainAnswers[i]}"]`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(radio) radio.checked = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function checkTrainTopic(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const qs = allTopics[currentTrainTopic];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let score=0, newErr=[];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for(let i=0;i&lt;qs.length;i++){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let sel = document.querySelector(`input[name="t${i}"]:checked`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let ans = sel?sel.value:"";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentTrainAnswers[i] = ans;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(ans===qs[i].correct) score++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if(ans) newErr.push({topic:getTopicName(currentTrainTopic),question:qs[i].text,userAnswer:ans,correctAnswer:qs[i].correct,date:new Date().toLocaleString()});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>userErrors = [...newErr,...userErrors].slice(0,300);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>localStorage.setItem('grammar_errors_pro2',JSON.stringify(userErrors));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderErrorsList();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('trainTopicResult').innerHTML = `&lt;div&gt;✅ ${getTopicName(currentTrainTopic)}: ${score}/20 правильных. Ошибки сохранены.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateXP(score);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 50 УНИКАЛЬНЫХ ВОПРОСОВ ДЛЯ ТЕСТА (с Passive и Reported Speech)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const fullTestQuestions = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (work) here since 2018.", correct:"has worked", opts:["worked","has worked","have worked"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The letter ________ (send) yesterday.", correct:"was sent", opts:["is sent","was sent","has sent"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I am reading' → She said she ________ reading.", correct:"was", opts:["is","was","were"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If it rains, we ________ (stay) at home.", correct:"will stay", opts:["stay","will stay","would stay"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is interested ________ learning Spanish.", correct:"in", opts:["in","at","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The ________ (compete) was very exciting.", correct:"competition", opts:["compete","competition","competitor"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"By 2025, they ________ (finish) the project.", correct:"will have finished", opts:["will finish","will have finished","finish"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The house ________ (build) in 1980.", correct:"was built", opts:["is built","was built","has built"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I have finished' → He said he ________ finished.", correct:"had", opts:["has","had","have"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If I ________ (be) you, I would apologise.", correct:"were", opts:["was","were","am"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He is responsible ________ the project.", correct:"for", opts:["of","for","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is very ________ (create).", correct:"creative", opts:["creation","creative","creativity"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"At 8pm yesterday, I ________ (watch) TV.", correct:"was watching", opts:["watched","was watching","had watched"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The cake ________ (eat) already.", correct:"has been eaten", opts:["has eaten","has been eaten","was eaten"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I will call you' → She said she ________ call me.", correct:"would", opts:["will","would","shall"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If she had studied, she ________ (pass) the exam.", correct:"would have passed", opts:["would pass","would have passed","passed"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'm not very good ________ math.", correct:"at", opts:["in","at","on"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"His ________ (decide) surprised everyone.", correct:"decision", opts:["deciding","decision","decide"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"When we arrived, the film ________ (already/start).", correct:"had already started", opts:["has started","had already started","already started"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The room ________ (clean) when I arrived.", correct:"was being cleaned", opts:["was cleaning","was being cleaned","cleaned"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I can swim' → He said he ________ swim.", correct:"could", opts:["can","could","might"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If you heat ice, it ________ (melt).", correct:"melts", opts:["melt","melts","will melt"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"We arrived ________ the airport late.", correct:"at", opts:["to","at","in"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The ________ (develop) of the app took months.", correct:"development", opts:["developing","development","developer"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"This time next week, we ________ (fly) to Paris.", correct:"will be flying", opts:["will fly","will be flying","are flying"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The documents ________ (must/sign) today.", correct:"must be signed", opts:["must sign","must be signed","must have signed"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I must go' → She said she ________ to go.", correct:"had", opts:["must","had","has"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Unless you study, you ________ (pass).", correct:"won't pass", opts:["don't pass","won't pass","wouldn't pass"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She apologised ________ being late.", correct:"for", opts:["about","for","of"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"Don't be so ________ (patient)!", correct:"impatient", opts:["unpatient","impatient","inpatient"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (read) a book right now.", correct:"is reading", opts:["reads","is reading","has read"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"This book ________ (can/find) in any library.", correct:"can be found", opts:["can find","can be found","is found"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'I saw her yesterday' → He said he ________ her the day before.", correct:"had seen", opts:["saw","had seen","has seen"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I wish I ________ (be) taller.", correct:"were", opts:["was","were","am"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I look forward ________ hearing from you.", correct:"to", opts:["for","to","at"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is a ________ (success) businesswoman.", correct:"successful", opts:["success","succeed","successful"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (learn) English for five years now.", correct:"has been learning", opts:["has learned","has been learning","learns"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The concert ________ (cancel) due to rain.", correct:"was cancelled", opts:["cancelled","was cancelled","has cancelled"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"'We are leaving now' → They said they ________ leaving then.", correct:"were", opts:["are","were","was"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"If only she ________ (listen) to my advice yesterday.", correct:"had listened", opts:["listened","had listened","would listen"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is famous ________ her paintings.", correct:"for", opts:["of","for","about"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The ________ (perform) was outstanding.", correct:"performance", opts:["perform","performer","performance"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"He would have called if his phone ________ (not/die).", correct:"hadn't died", opts:["didn't die","hadn't died","wouldn't die"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She insisted ________ paying for dinner.", correct:"on", opts:["in","on","at"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I'm not familiar ________ this topic.", correct:"with", opts:["to","with","in"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She is married ________ a doctor.", correct:"to", opts:["with","to","of"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"By the time we get there, the movie ________ (start).", correct:"will have started", opts:["will start","will have started","starts"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"The children ________ (play) outside when it started to rain.", correct:"were playing", opts:["played","were playing","had played"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"She ________ (never/meet) such a kind person before.", correct:"had never met", opts:["never met","has never met","had never met"]},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{text:"I ________ (think) about changing my job recently.", correct:"have been thinking", opts:["think","am thinking","have been thinking"]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let fullTestAnswers={};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderFullTest(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let html='';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>fullTestQuestions.forEach((q,i)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>html+=`&lt;div class="test-question"&gt;&lt;p&gt;&lt;strong&gt;${i+1}. ${q.text}&lt;/strong&gt;&lt;/p&gt;&lt;div class="options"&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q.opts.forEach(opt=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const checked = fullTestAnswers[i] === opt ? 'checked' : '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>html+=`&lt;label class="option"&gt;&lt;input type="radio" name="f${i}" value="${opt}" ${checked}&gt; ${opt}&lt;/label&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>html+=`&lt;/div&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('fullTestContainer').innerHTML=html;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for(let i=0;i&lt;fullTestQuestions.length;i++){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(fullTestAnswers[i]){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let radio = document.querySelector(`input[name="f${i}"][value="${fullTestAnswers[i]}"]`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(radio) radio.checked = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function checkFullTest(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let score=0, newErr=[];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for(let i=0;i&lt;fullTestQuestions.length;i++){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let sel = document.querySelector(`input[name="f${i}"]:checked`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let ans = sel?sel.value:"";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>fullTestAnswers[i] = ans;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(ans===fullTestQuestions[i].correct) score++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if(ans) newErr.push({topic:"Полный тест",question:fullTestQuestions[i].text,userAnswer:ans,correctAnswer:fullTestQuestions[i].correct,date:new Date().toLocaleString()});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>userErrors = [...newErr,...userErrors].slice(0,300);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>localStorage.setItem('grammar_errors_pro2',JSON.stringify(userErrors));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderErrorsList();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let percent=(score/50)*100;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let comment = percent&gt;=80 ? "🏆 Отлично! Уровень B2" : (percent&gt;=60 ? "👍 Хорошо, но повтори ошибки" : "📖 Загляни в 'Мои ошибки' и разбор тем");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('testResult').innerHTML=`&lt;div&gt;🎯 Тест: ${score}/50 (${percent}%). ${comment}&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateXP(score);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateXP(p){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let l=parseInt(document.getElementById('xpLevel').innerText)||1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let inc=Math.floor(p/10);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(inc&gt;0) document.getElementById('xpLevel').innerText=Math.min(l+inc,50);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function exportResults(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let data={date:new Date().toLocaleString(),level:document.getElementById('xpLevel').innerText,errors:userErrors,vocabulary:userVocabulary,notes:userNotes};</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let a=document.createElement('a');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a.download=`grammar_results_${Date.now()}.json`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a.click();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alert('Результаты экспортированы!');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderErrorsList(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let c=document.getElementById('errorsList');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(!c) return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(userErrors.length===0){c.innerHTML='&lt;div&gt;✅ Пока нет ошибок! Так держать.&lt;/div&gt;';return;}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let html='';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>userErrors.slice(0,50).forEach(e=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>html+=`&lt;div class="error-item"&gt;&lt;div class="flex-between"&gt;&lt;strong&gt;❌ ${e.topic}&lt;/strong&gt;&lt;span class="badge"&gt;${e.date}&lt;/span&gt;&lt;/div&gt;&lt;p&gt;📝 ${e.question}&lt;/p&gt;&lt;p&gt;❌ Ваш ответ: ${e.userAnswer}&lt;/p&gt;&lt;p&gt;✅ Правильно: ${e.correctAnswer}&lt;/p&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>c.innerHTML=html;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function clearErrors(){userErrors=[];localStorage.setItem('grammar_errors_pro2',JSON.stringify(userErrors));renderErrorsList();}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderVocabulary(){let c=document.getElementById('vocabList');if(userVocabulary.length===0){c.innerHTML='&lt;div&gt;📖 Добавь свои слова с переводом&lt;/div&gt;';return;}let html='';userVocabulary.forEach((w,i)=&gt;{html+=`&lt;div class="word-item"&gt;&lt;div class="flex-between"&gt;&lt;strong&gt;📖 ${w.word}&lt;/strong&gt;&lt;button class="small" data-delv="${i}"&gt;🗑️&lt;/button&gt;&lt;/div&gt;&lt;p&gt;🇷🇺 ${w.translation}&lt;/p&gt;&lt;p style="font-size:0.8rem;"&gt;${w.example||''}&lt;/p&gt;&lt;/div&gt;`;});c.innerHTML=html;document.querySelectorAll('[data-delv]').forEach(b=&gt;{b.addEventListener('click',(e)=&gt;{let id=parseInt(b.getAttribute('data-delv'));userVocabulary.splice(id,1);localStorage.setItem('grammar_vocab_pro2',JSON.stringify(userVocabulary));renderVocabulary();});});}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addWord(){let w=document.getElementById('newWord').value.trim(),t=document.getElementById('newWordTrans').value.trim(),ex=document.getElementById('wordExample').value.trim();if(w&amp;&amp;t){userVocabulary.push({word:w,translation:t,example:ex});localStorage.setItem('grammar_vocab_pro2',JSON.stringify(userVocabulary));renderVocabulary();document.getElementById('newWord').value='';document.getElementById('newWordTrans').value='';document.getElementById('wordExample').value='';}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderNotes(){let c=document.getElementById('notesList');if(userNotes.length===0){c.innerHTML='&lt;div&gt;📭 Нет заметок. Сохраняй из разбора тем!&lt;/div&gt;';return;}let html='';userNotes.forEach((n,i)=&gt;{html+=`&lt;div class="note-item"&gt;&lt;div class="flex-between"&gt;&lt;strong&gt;📌 ${n.title}&lt;/strong&gt;&lt;button class="small" data-deln="${i}"&gt;🗑️&lt;/button&gt;&lt;/div&gt;&lt;p&gt;${n.content}&lt;/p&gt;&lt;/div&gt;`;});c.innerHTML=html;document.querySelectorAll('[data-deln]').forEach(b=&gt;{b.addEventListener('click',(e)=&gt;{let id=parseInt(b.getAttribute('data-deln'));userNotes.splice(id,1);localStorage.setItem('grammar_notes_pro2',JSON.stringify(userNotes));renderNotes();});});}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addNote(t,c){if(t.trim()||c.trim()){userNotes.push({title:t.slice(0,50)||"Заметка",content:c.slice(0,300)});localStorage.setItem('grammar_notes_pro2',JSON.stringify(userNotes));renderNotes();}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function startFlashcards(){if(userNotes.length===0){alert('Нет заметок');return;}let div=document.getElementById('flashcardMode');let idx=0;function show(){let n=userNotes[idx];div.innerHTML=`&lt;div style="text-align:center"&gt;&lt;p&gt;${idx+1}/${userNotes.length}&lt;/p&gt;&lt;div style="background:#0f172a;padding:16px;border-radius:16px;"&gt;&lt;strong&gt;📘 ${n.title}&lt;/strong&gt;&lt;p&gt;${n.content}&lt;/p&gt;&lt;/div&gt;&lt;div style="margin-top:12px;"&gt;&lt;button id="fcPrev" class="secondary small"&gt;◀&lt;/button&gt;&lt;button id="fcNext" class="secondary small"&gt;▶&lt;/button&gt;&lt;button id="fcClose" class="secondary small"&gt;Закрыть&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;`;document.getElementById('fcPrev')?.addEventListener('click',()=&gt;{if(idx&gt;0)idx--;show();});document.getElementById('fcNext')?.addEventListener('click',()=&gt;{if(idx&lt;userNotes.length-1)idx++;show();});document.getElementById('fcClose')?.addEventListener('click',()=&gt;{div.style.display='none';});}div.style.display='block';show();}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderDiscussions(){let c=document.getElementById('discussionList');if(discussions.length===0){c.innerHTML='&lt;div&gt;💬 Напиши первый вопрос!&lt;/div&gt;';return;}let html='';[...discussions].reverse().forEach(d=&gt;{html+=`&lt;div class="discussion-item"&gt;&lt;div class="badge"&gt;💬 студентка&lt;/div&gt;&lt;p style="margin:8px 0;"&gt;${d.text}&lt;/p&gt;&lt;span style="font-size:0.7rem;"&gt;${d.date}&lt;/span&gt;&lt;/div&gt;`;});c.innerHTML=html;}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addDiscussion(t){if(t.trim()){discussions.push({text:t.trim(),date:new Date().toLocaleString()});localStorage.setItem('grammar_discussions_pro2',JSON.stringify(discussions));renderDiscussions();}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('[data-save]').forEach(btn=&gt;{btn.addEventListener('click',()=&gt;{let t=btn.getAttribute('data-save');let texts={tenses:"Все времена: Present, Past, Future (Simple, Continuous, Perfect, Perfect Continuous)",passive:"Passive Voice: to be+V3. The letter is sent / was sent / will be sent",reported:"Reported Speech: согласование времён (present→past, will→would, can→could)",prepositions:"50+ предлогов времени, места и зависимых предлогов"};addNote(t,texts[t]||"Грамматическое правило");});});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('addNoteBtn')?.addEventListener('click',()=&gt;{addNote(document.getElementById('newNoteTitle').value,document.getElementById('newNoteContent').value);document.getElementById('newNoteTitle').value='';document.getElementById('newNoteContent').value='';});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('exportNotesBtn')?.addEventListener('click',startFlashcards);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('postCommentBtn')?.addEventListener('click',()=&gt;{addDiscussion(document.getElementById('newComment').value);document.getElementById('newComment').value='';});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('submitTestBtn')?.addEventListener('click',checkFullTest);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('exportResultsBtn')?.addEventListener('click',exportResults);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('clearErrorsBtn')?.addEventListener('click',clearErrors);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('addWordBtn')?.addEventListener('click',addWord);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('checkTrainTopicBtn')?.addEventListener('click',checkTrainTopic);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.topic-btn').forEach(btn=&gt;{btn.addEventListener('click',()=&gt;{currentTrainTopic=btn.getAttribute('data-train-topic');currentTrainAnswers={};renderTrainTopic();document.querySelectorAll('.topic-btn').forEach(b=&gt;b.classList.remove('active-topic'));btn.classList.add('active-topic');});});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.tab-btn').forEach(btn=&gt;{btn.addEventListener('click',()=&gt;{let id=btn.getAttribute('data-tab');document.querySelectorAll('.tab-pane').forEach(p=&gt;p.classList.remove('active-pane'));document.getElementById(id).classList.add('active-pane');document.querySelectorAll('.tab-btn').forEach(b=&gt;b.classList.remove('active'));btn.classList.add('active');if(id==='errors')renderErrorsList();if(id==='vocab')renderVocabulary();});});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderTrainTopic();renderFullTest();renderNotes();renderDiscussions();renderVocabulary();renderErrorsList();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
